@@ -43,7 +43,7 @@ public class OpponentManager : MonoBehaviour
     public int endStateValueWin, endStateValueLose;
     
     public Text OpponentSpeech;
-    WaitForSeconds waitDialogue = new WaitForSeconds(0.2f);
+    WaitForSeconds waitDialogue = new WaitForSeconds(0.05f);
 
     public PlaySceneManager PSM;
 
@@ -80,7 +80,9 @@ public class OpponentManager : MonoBehaviour
             dialogue[1] = "Hah I guess thats ok";
             dialogue[2] = "Neutral Feel";
             dialogue[3] = "I am mildly mad";
+            dialogue[4] = "You disappoint your ancestors";
             dialogue[4] = "I am going to destroy everything you love";
+
         }
     }
 
