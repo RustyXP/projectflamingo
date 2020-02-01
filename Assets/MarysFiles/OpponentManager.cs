@@ -9,6 +9,7 @@ using UnityEngine.UI;
  
  Usage:    
   
+  Emotional States: 3 = neutral, 0 = good, 7 = bad
  */
 public class OpponentManager : MonoBehaviour
 {

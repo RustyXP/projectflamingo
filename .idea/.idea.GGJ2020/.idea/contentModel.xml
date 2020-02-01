@@ -35,16 +35,15 @@
           </e>
         </e>
         <e p="MarysFiles" t="Include">
-          <e p="MaryScripts" t="Include">
-            <e p="OpponentManager.cs" t="Include" />
-            <e p="PlaySceneManager.cs" t="Include" />
-          </e>
+          <e p="OpponentManager.cs" t="Include" />
+          <e p="PlaySceneManager.cs" t="Include" />
         </e>
         <e p="PlayerFaceOutput.cs" t="Include" />
         <e p="Script" t="Include">
           <e p="FacialExpression.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="ImageResultsParser.cs" t="Include" />
+          <e p="Loader.cs" t="Include" />
         </e>
         <e p="StreamingAssets" t="Include">
           <e p="affdex-data-3" t="Include">

@@ -23,11 +23,13 @@ public class PlaySceneManager : MonoBehaviour
             _currentState = value;
             switch (value)
             {
-                case 0: break;
+                case 0: 
+                    break;
                 case 1: 
                     OM.OpponentSpeak();
                     break;
-                case 2: break;
+                case 2: 
+                    break;
             }
         }
     }
@@ -54,6 +56,7 @@ public class PlaySceneManager : MonoBehaviour
     {
         
     }
+
     
     
 
