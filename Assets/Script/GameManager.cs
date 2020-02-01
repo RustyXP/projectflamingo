@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     private Text levelText;
     private GameObject levelImage;
     private bool doingSetup;
+    public int playerTime = 0; //Measure how long it takes the player top play through.
+    public bool playersTurn = true;
 
     // Start is called before the first frame update
     void Awake()
