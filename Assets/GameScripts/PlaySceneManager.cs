@@ -64,14 +64,32 @@ public class PlaySceneManager : MonoBehaviour
         {
             currentState = 1;
         }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            OM.currentEmotion--;
+        }
         
     }
 
-    void sceneEnder()
+    public void sceneLost()
     {
-        
+        Debug.Log("oh no you suck");
     }
 
+    public void sceneWon()
+    {
+        Debug.Log("yay no divorce!");
+
+    }
+
+    public IEnumerator changeScene(string targetScene)
+    {
+        WaitForSeconds wait = new WaitForSeconds(2f);
+
+        yield return wait;
+
+        SceneManager.LoadScene(targetScene);
+    }
     
     
 
