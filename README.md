@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # UnityChan
 An emotion mimicry demonstration using Unity-Chan. 
 [!["UnityChan Surrounded by Fog"](Fog.png)](http://www.youtube.com/watch?v=MZCNWWyHa98 "Affectiva's Plugin for Unity Allows Game Avatar to Mirror Player's Emotions")
@@ -15,3 +16,6 @@ Documentation on how to use the Unity asset is in the [developer portal](http://
 
 # Unity-Chan License
 These contents are licensed under the [Unity-Chan License Terms and Conditions](http://unity-chan.com/download/license_en.html). You are allowed to use these contents only if you follow the [Character Use Guidelines](http://unity-chan.com/download/guideline_en.html) set by Unity Technologies Japan G.K., for the usage of its characters.
+=======
+# Code Name Flamingo
+>>>>>>> 9d1dea5394031c486f0fe86a4ada4767234ad2cb
