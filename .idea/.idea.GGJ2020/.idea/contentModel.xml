@@ -34,7 +34,7 @@
             </e>
           </e>
         </e>
-        <e p="MarysFiles" t="Include">
+        <e p="GameScripts" t="Include">
           <e p="OpponentManager.cs" t="Include" />
           <e p="PlaySceneManager.cs" t="Include" />
         </e>

@@ -3,13 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 /*
- Purpose: Holds the data about the opponent 
+ How it works: Holds the data about the opponent 
             (body sprite, face sprites, face position (if perspective is used), dialogue, emotional state)
+ On Scene Start:
+ Needs to have: a body sprite, a name, an array of dialogue, a set of facial expressions, 
+ position for the face to be (for perspective purposes), the emotion that is wanted
  
- 
- Usage:    
+ Acting:
+ 1. On Start, the player's emotion will be a neutral 3. 
+ 2. When called upon by PlaySceneManager, will display the dialogue to the UI.
+ 3. When the dialogue is completed, tells PlaySceneManager that CharTalking = false. 
   
-  Emotional States: 3 = neutral, 0 = good, 7 = bad
+  Reacting:
+  1. After the player "locks in" an emotion, it will increase/decrease the Opponent's emotion by 1 
+  (let's discuss if we want it to go through playscenemanger or not)
+  2. When the emotion is changed, change the facial expression as well. 
+  3. The next time the Opponent speaks, it will use the dialogue associated with this level of emotion.
+  
+  Emotional States: 3 = neutral, 0 = good, 6 = bad
  */
 public class OpponentManager : MonoBehaviour
 {
@@ -41,7 +52,16 @@ public class OpponentManager : MonoBehaviour
         get { return _currentEmotion; }
         set
         {
-            faceSR.sprite = emotions[value];
+            if (value == 1)
+            {
+                faceSR.sprite = emotions[0];
+            }else if (value == 3)
+            {
+                faceSR.sprite = emotions[1];
+            }else if (value == 5)
+            {
+                faceSR.sprite = emotions[2];
+            }
             _currentEmotion = value;
         }
     }
@@ -49,7 +69,7 @@ public class OpponentManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        faceSR.sprite = emotions[currentEmotion];
+        currentEmotion = 3;
 
         if (DebugMode)
         {

@@ -5,9 +5,17 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 /*
- Purpose:
+ How it works:
+ Manages the general state of the scene. Basically a state machine using CurrentState.
  
- Usage: 
+ 1. Kicks off the scene on Start()
+ 2. Lets the Opponent talk first by setting currentState to 1
+ 3. Lets the Player emote by setting currentState to 2
+ 
+Win State: When the Opponent's emotion = 0, Win.
+Lose State: When the Opponent's emotion = 6, lose.
+
+On win/lose, displays text that lets player know they won or lost, then switch scene to the dining table scene
  */
 
 
@@ -27,8 +35,11 @@ public class PlaySceneManager : MonoBehaviour
                     break;
                 case 1: 
                     OM.OpponentSpeak();
+                    PlayerReactionEnabled = false;
                     break;
-                case 2: 
+                case 2:
+                    CharTalking = false;
+                    PlayerReactionEnabled = true;
                     break;
             }
         }
