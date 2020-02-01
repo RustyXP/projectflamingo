@@ -55,7 +55,10 @@ namespace Affdex
 
             //load our lib!
             string affdexDataPath = Application.streamingAssetsPath + "/affdex-data-3";
+            Debug.Log("Hi! It's Greg.");
             affdexDataPath = affdexDataPath.Replace('/', '\\');
+            Debug.Log("affdexDataPath is...");
+            Debug.Log(affdexDataPath);
             nativeHandle = affdexInitialize(discrete, affdexDataPath);
 
             FaceResults faceFound = new FaceResults(this.onFaceFound);
