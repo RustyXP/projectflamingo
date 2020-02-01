@@ -50,8 +50,12 @@ public class PlaySceneManager : MonoBehaviour
     {
         string sr = "";
         string[] characters = new string[splitDialogue.Length];
+        for (int i = 0; i < characters.Length; i++)
+        {
+            characters[i] += splitDialogue[i];
+        }
         opponentTalking = true;
-        for (int i = 0; i < splitDialogue.Length; i++)
+        for (int i = 0; i < characters.Length; i++)
         {
             sr += splitDialogue[i];
             OpponentSpeech.text = sr;
