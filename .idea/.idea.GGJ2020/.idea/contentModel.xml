@@ -34,6 +34,12 @@
             </e>
           </e>
         </e>
+        <e p="Mary's Files" t="Include">
+          <e p="MaryScripts" t="Include">
+            <e p="OpponentManager.cs" t="Include" />
+            <e p="PlaySceneManager.cs" t="Include" />
+          </e>
+        </e>
         <e p="PlayerFaceOutput.cs" t="Include" />
         <e p="Script" t="Include">
           <e p="FacialExpression.cs" t="Include" />

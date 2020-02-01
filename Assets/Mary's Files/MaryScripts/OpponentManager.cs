@@ -2,9 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaySceneManager : MonoBehaviour
+public class OpponentManager : MonoBehaviour
 {
-    public static int 
+    public string name;
+
+    public int id;
+
+    public SpriteRenderer bodySR, faceSR;
+
+    public Sprite bodySprite;
+
+    public Sprite[] emotions;
+    
     // Start is called before the first frame update
     void Start()
     {
