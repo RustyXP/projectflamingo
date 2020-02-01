@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Affdex" t="Include">
+          <e p="Examples" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Listener.cs" t="Include" />
+              <e p="ViewCam.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Plugins" t="Include">
+            <e p="Editor" t="Include">
+              <e p="DetectorEditor.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="AffdexUnityUtils.cs" t="Include" />
+              <e p="AndroidNativePlatform.cs" t="Include" />
+              <e p="CameraInput.cs" t="Include" />
+              <e p="DebugFeatureViewer.cs" t="Include" />
+              <e p="Detector.cs" t="Include" />
+              <e p="Expressions.cs" t="Include" />
+              <e p="Face.cs" t="Include" />
+              <e p="Frame.cs" t="Include" />
+              <e p="ImageResultsListener.cs" t="Include" />
+              <e p="iOSNativePlatform.cs" t="Include" />
+              <e p="NativePlatform.cs" t="Include" />
+              <e p="OSXNativePlatform.cs" t="Include" />
+              <e p="VideoFileInput.cs" t="Include" />
+              <e p="WindowsNativePlatform.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PlayerFaceOutput.cs" t="Include" />
+        <e p="Script" t="Include">
+          <e p="FacialExpression.cs" t="Include" />
+          <e p="ImageResultsParser.cs" t="Include" />
+        </e>
+        <e p="StreamingAssets" t="Include">
+          <e p="affdex-data-3" t="Include">
+            <e p="fileList.txt" t="Include" />
+            <e p="haarcascade" t="Include">
+              <e p="004_lbp_15stage.xml" t="Include" />
+              <e p="haarcascade_frontalface_alt2.xml" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+          </e>
+          <e p="affdex-data-ios" t="Include">
+            <e p="haarcascade" t="Include">
+              <e p="004_lbp_15stage.xml" t="Include" />
+              <e p="haarcascade_frontalface_alt2.xml" t="Include" />
+            </e>
+          </e>
+          <e p="affdex-data-osx" t="Include">
+            <e p="haarcascade" t="Include">
+              <e p="004_lbp_15stage.xml" t="Include" />
+              <e p="haarcascade_frontalface_alt2.xml" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="testerScript.cs" t="Include" />
+        <e p="UnityChan" t="Include">
+          <e p="license.txt" t="Include" />
+          <e p="Models" t="Include">
+            <e p="UnityChanShader" t="Include">
+              <e p="Shader" t="Include">
+                <e p="Unitychan_chara_akarami_blend.shader" t="Include" />
+                <e p="Unitychan_chara_eye.shader" t="Include" />
+                <e p="Unitychan_chara_eye_blend.shader" t="Include" />
+                <e p="Unitychan_chara_eyelash_blend.shader" t="Include" />
+                <e p="Unitychan_chara_fuku.shader" t="Include" />
+                <e p="Unitychan_chara_fuku_ds.shader" t="Include" />
+                <e p="Unitychan_chara_hada.shader" t="Include" />
+                <e p="Unitychan_chara_hada_blend.shader" t="Include" />
+                <e p="Unitychan_chara_hair.shader" t="Include" />
+                <e p="Unitychan_chara_hair_ds.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="CameraController.cs" t="Include" />
+            <e p="FaceUpdate.cs" t="Include" />
+            <e p="IdleChanger.cs" t="Include" />
+            <e p="PlayerEmotions.cs" t="Include" />
+            <e p="ThirdPersonCamera.cs" t="Include" />
+            <e p="UnityChanControlScriptWithRgidBody.cs" t="Include" />
+          </e>
+          <e p="Stage" t="Include">
+            <e p="Shader" t="Include">
+              <e p="AlphaMask.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="GGJ2020.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_GGJ2020.1953938649.00" t="ExcludeRecursive" />
+  </component>
+</project>

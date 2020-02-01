@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testerscript : MonoBehaviour
+public class testerScript : MonoBehaviour
 {
     public PlayerEmotions PE;
 
