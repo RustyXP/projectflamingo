@@ -37,8 +37,7 @@ public class OpponentManager : MonoBehaviour
 
     public Sprite[] emotions;
 
-    private int _currentEmotion;
-
+ 
     public string[] dialogue;
 
     public int endStateValueWin, endStateValueLose;
@@ -53,11 +52,15 @@ public class OpponentManager : MonoBehaviour
 
     public Animator anim;
     
+    
+    private int _currentEmotion;
     public int currentEmotion
     {
         get { return _currentEmotion; }
         set
         {
+            Debug.Log(value + "CE");
+            anim.SetInteger("Emotion", value);
             
             if (value == 1)
             {
@@ -80,7 +83,7 @@ public class OpponentManager : MonoBehaviour
             
             for (int i = 0; i < EmotionPellets.Length; i++)
             {
-                if (i < currentEmotion)
+                if (i-1 < currentEmotion)
                 {
                     EmotionPellets[i].sprite = filledPellet;
                 }
@@ -90,19 +93,22 @@ public class OpponentManager : MonoBehaviour
                     EmotionPellets[i].sprite = emptyPellet;
                 }
             }
+
             _currentEmotion = value;
+            Debug.Log(name);
+            
+            PSM.currentState = 1;
+
         }
     }
     
     // Start is called before the first frame update
     void Start()
     {
-        currentEmotion = 3;
-
+        
         if (DebugMode)
         {
             name = "dad";
-            currentEmotion = 3;
             dialogue = new string[7];
             
             dialogue[6] = "Aw shucks kid I love ya";
@@ -116,15 +122,20 @@ public class OpponentManager : MonoBehaviour
             endStateValueLose = 0;
             endStateValueWin = 7;
         }
+        
+        
+        currentEmotion = 3;
     }
 
     public void OpponentSpeak()
     {
+        Debug.Log(currentEmotion);
         StartCoroutine(dialogueDisplayer(dialogue[currentEmotion]));
     }
 
     IEnumerator dialogueDisplayer(string splitDialogue)
     {
+        anim.SetBool("IsTalking", true);
         string sr = "";
         string[] characters = new string[splitDialogue.Length];
         for (int i = 0; i < characters.Length; i++)
@@ -140,5 +151,7 @@ public class OpponentManager : MonoBehaviour
         }
         PSM.CharTalking = false;
         PSM.currentState = 2;
+        anim.SetBool("IsTalking", false);
+
     }
 }

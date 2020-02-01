@@ -50,11 +50,12 @@ public class PlaySceneManager : MonoBehaviour
 
     public OpponentManager OM;
     
+
+    
     // Start is called before the first frame update
     void Start()
     {
         currentState = 0;
-        OM = FindObjectOfType<OpponentManager>();
     }
 
     // Update is called once per frame
@@ -62,13 +63,16 @@ public class PlaySceneManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            currentState = 1;
+            //currentState = 1;
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
+            OM.currentEmotion++;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
             OM.currentEmotion--;
         }
-        
     }
 
     public void sceneLost()
