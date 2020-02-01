@@ -13,6 +13,7 @@ using UnityEngine.SceneManagement;
 
 public class PlaySceneManager : MonoBehaviour
 {
+    //0 = nobody is doing anything, 1 = opponent speaking, 2 = player emoting;
     private int _currentState;
     public int currentState
     {
@@ -20,19 +21,27 @@ public class PlaySceneManager : MonoBehaviour
         set
         {
             _currentState = value;
-            
+            switch (value)
+            {
+                case 0: break;
+                case 1: 
+                    OM.OpponentSpeak();
+                    break;
+                case 2: break;
+            }
         }
     }
 
-    public Text OpponentSpeech;
-    public bool opponentTalking;
+    public bool PlayerReactionEnabled = false;
+    public bool CharTalking = false;
+
+    public OpponentManager OM;
     
-    WaitForSeconds waitDialogue = new WaitForSeconds(0.2f);
-    public 
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentState = 0;
+        OM = FindObjectOfType<OpponentManager>();
     }
 
     // Update is called once per frame
@@ -45,23 +54,8 @@ public class PlaySceneManager : MonoBehaviour
     {
         
     }
+    
+    
 
-    IEnumerator dialogueDisplayer(string splitDialogue)
-    {
-        string sr = "";
-        string[] characters = new string[splitDialogue.Length];
-        for (int i = 0; i < characters.Length; i++)
-        {
-            characters[i] += splitDialogue[i];
-        }
-        opponentTalking = true;
-        for (int i = 0; i < characters.Length; i++)
-        {
-            sr += splitDialogue[i];
-            OpponentSpeech.text = sr;
-            yield return waitDialogue;
-        }
-
-        opponentTalking = false;
-    }
+    
 }
