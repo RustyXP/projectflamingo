@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
             case 0:
                 {
                     level++;
+                    Debug.Log("Loading Smile to Start Scene...");
                     SceneManager.LoadScene("SmileToStart", LoadSceneMode.Single);
                     SoundManager.instance.PlayLevelSounds();
                     break;
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
             case 1:
                 {
                     level++;
+                    Debug.Log("Loading Text Intro Scene...");
                     SceneManager.LoadScene("TextIntroScene", LoadSceneMode.Single);
                     SoundManager.instance.PlayLevelSounds();
                     break;
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour
             case 2:
                 {
                     level++;
+                    Debug.Log("Loading Tutorial Scene...");
                     SceneManager.LoadScene("TutorialScene", LoadSceneMode.Single);
                     SoundManager.instance.PlayLevelSounds();
                     break;
@@ -66,6 +69,7 @@ public class GameManager : MonoBehaviour
             case 3:
                 {
                     level++;
+                    Debug.Log("Loading Play Scene...");
                     SceneManager.LoadScene("PlayScene", LoadSceneMode.Single);
                     SoundManager.instance.PlayLevelSounds();
                     break;

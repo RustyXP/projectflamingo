@@ -43,7 +43,7 @@ public class PlayerListener : ImageResultsListener
             if (runTimer)
             {
                 timer += Time.deltaTime;
-                Debug.Log(loadBar.fillAmount);
+                //Debug.Log(loadBar.fillAmount);
                 loadBar.fillAmount = timer / cutOffTime;
                 loadBar.color = Color.Lerp(grey, midGreen, timer / cutOffTime);
             }
