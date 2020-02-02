@@ -26,8 +26,6 @@ using UnityEngine.UI;
  */
 public class OpponentManager : MonoBehaviour
 {
-    public bool DebugMode;
-    
     public string name;
 
     //0 = Dad, 1 = mom
@@ -36,8 +34,6 @@ public class OpponentManager : MonoBehaviour
     public SpriteRenderer bodySR, faceSR;
 
     public Sprite[] bodySprite;
-
-    public Sprite[] emotions;
 
     public int desiredEmotion;
     
@@ -53,7 +49,6 @@ public class OpponentManager : MonoBehaviour
     public Image[] EmotionPellets;
     public Sprite filledPellet, emptyPellet;
 
-    public AnimatorController[] anims;
     public Animator anim;
 
     public GameObject greyOut;
@@ -69,16 +64,7 @@ public class OpponentManager : MonoBehaviour
             Debug.Log(value + "CE");
             anim.SetInteger("Emotion", value);
             
-            if (value == 1)
-            {
-                faceSR.sprite = emotions[2];
-            }else if (value == 3)
-            {
-                faceSR.sprite = emotions[1];
-            }else if (value == 5)
-            {
-                faceSR.sprite = emotions[0];
-            }else if (value == endStateValueLose)
+            if (value == endStateValueLose)
             {
                 PSM.sceneLost();
             }
@@ -117,12 +103,11 @@ public class OpponentManager : MonoBehaviour
         {
             name = "dad";
             dialogue = new string[7];
-
-            //anim = anims[0];
-
             //happiness
+            bodySR.sprite = bodySprite[id];
             desiredEmotion = 0;
             
+            anim.SetInteger("ID",id);
             dialogue[6] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
             dialogue[5] = "We're really trying to work together, though… I believe we can do this.";
             dialogue[4] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
@@ -138,11 +123,11 @@ public class OpponentManager : MonoBehaviour
             name = "mom";
             dialogue = new string[7];
 
-            //anim = anims[1];
-
             //Change emotion
             desiredEmotion = 0;
-            
+            bodySR.sprite = bodySprite[id];
+
+            anim.SetInteger("ID",id);
             dialogue[6] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
             dialogue[5] = "We're really trying to work together, though… I believe we can do this.";
             dialogue[4] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
