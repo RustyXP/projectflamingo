@@ -37,6 +37,15 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void YouWin()
+    {
+        Debug.Log("You won!");
+        SceneManager.LoadScene("YouRepairedYourHome", LoadSceneMode.Single);
+        enabled = false;
+        level = 0;
+
+    }
+
     public void LoadNextLevel()
     {
         Debug.Log("Load new level: " + level);
