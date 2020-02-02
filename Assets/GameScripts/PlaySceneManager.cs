@@ -67,6 +67,8 @@ public class PlaySceneManager : MonoBehaviour
         {
             if (PL.emotionIndex != -1)
             {
+                PlayerReactionEnabled = false;
+                PL.enableSearch = false;
                 if (PL.emotionIndex == OM.desiredEmotion)
                 {
                     OM.currentEmotion++;

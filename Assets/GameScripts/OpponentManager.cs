@@ -84,7 +84,7 @@ public class OpponentManager : MonoBehaviour
             
             for (int i = 0; i < EmotionPellets.Length; i++)
             {
-                if (i-1 < currentEmotion)
+                if (i < currentEmotion)
                 {
                     EmotionPellets[i].sprite = filledPellet;
                 }
@@ -152,9 +152,15 @@ public class OpponentManager : MonoBehaviour
             OpponentSpeech.text = sr;
             yield return waitDialogue;
         }
+        anim.SetBool("IsTalking", false);
+
+        int bufferTime = 2;
+        for (int i = 0; i < bufferTime; i++)
+        {
+            yield return new WaitForSeconds(2);
+        }
         PSM.CharTalking = false;
         PSM.currentState = 2;
-        anim.SetBool("IsTalking", false);
 
     }
 }

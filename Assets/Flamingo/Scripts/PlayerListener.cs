@@ -32,6 +32,10 @@ public class PlayerListener : ImageResultsListener
                 timer += Time.deltaTime;
             }
         }
+        else
+        {
+            enableSearch = false;
+        }
     }
 
     public override void onFaceFound(float timestamp, int faceId)
