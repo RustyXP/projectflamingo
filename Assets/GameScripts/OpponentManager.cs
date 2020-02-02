@@ -31,7 +31,7 @@ public class OpponentManager : MonoBehaviour
     //0 = Dad, 1 = mom
     public int id;
 
-    public SpriteRenderer bodySR, faceSR;
+    public SpriteRenderer bodySR;
 
     public Sprite[] bodySprite;
 
@@ -117,7 +117,7 @@ public class OpponentManager : MonoBehaviour
             dialogue[0] = "I am through with not being listened to in my own house!";
 
             endStateValueLose = 0;
-            endStateValueWin = 7;
+            endStateValueWin = 6;
         }else if (id == 1)
         {
             name = "mom";
@@ -137,12 +137,9 @@ public class OpponentManager : MonoBehaviour
             dialogue[0] = "I am through with not being listened to in my own house!";
 
             endStateValueLose = 0;
-            endStateValueWin = 7;
+            endStateValueWin = 6;
         }
 
-        
-        
-        
         currentEmotion = 3;
     }
 

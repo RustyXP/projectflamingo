@@ -96,9 +96,11 @@ public class PlaySceneManager : MonoBehaviour
 
     public IEnumerator changeScene(bool win)
     {
+        Debug.Log("changescene start");
         WaitForSeconds wait = new WaitForSeconds(2f);
 
         yield return wait;
+        Debug.Log("changescene starokt");
 
         if (win)
         {
