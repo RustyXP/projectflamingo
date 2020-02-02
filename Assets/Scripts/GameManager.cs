@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
 
     public int level = 0;
     public int playerTime = 0; //Measure how long it takes the player top play through.
+    public bool youWin = false;
+    public bool youLose = false;
+    public bool testEndState = true;
+
 
     void Awake()
     {
@@ -31,9 +35,10 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Legit game over!");
-        SceneManager.LoadScene("GameOverScene", LoadSceneMode.Single);
-        enabled = false;
-        level = 0;
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+        SoundManager.instance.PlayLevelSounds();
+
+        StartCoroutine(ReloadSmileToStart());
 
     }
 
@@ -41,9 +46,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("You won!");
         SceneManager.LoadScene("YouWin", LoadSceneMode.Single);
-        enabled = false;
-        level = 0;
+        SoundManager.instance.PlayLevelSounds();
 
+        StartCoroutine(ReloadSmileToStart());
     }
 
     public void LoadNextLevel()
@@ -93,9 +98,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator ReloadSmileToStart()
     {
+        Debug.Log("Pause 5 seconds");
+        //yield on a new YieldInstruction that waits for X seconds.
+        yield return new WaitForSeconds(5);
+        level = 0;
+        LoadNextLevel();
+    }
 
+    private void Update()
+    {
+            if(youWin ==true && testEndState == true)
+            {
+                testEndState = false;
+                YouWin();
+            }
+            if(youLose == true && testEndState == true)
+            {
+                testEndState = false;
+                GameOver();
+            }
     }
 }
