@@ -46,12 +46,16 @@ public class OpponentManager : MonoBehaviour
 
     public PlaySceneManager PSM;
 
-    public Image[] EmotionPellets;
-    public Sprite filledPellet, emptyPellet;
+    //public Image[] EmotionPellets;
+    //public Sprite filledPellet, emptyPellet;
+
+    public Animator[] pellets;
 
     public Animator anim;
 
     public GameObject greyOut;
+
+    public bool[] pelletActive;
     
 
     private int _currentEmotion;
@@ -71,8 +75,22 @@ public class OpponentManager : MonoBehaviour
             {
                 PSM.sceneWon();
             }
+
             
+            if (pellets[value].GetBool("isActive"))
+            {
+                if (value < 7)
+                {
+                    pellets[value+1].SetBool("isActive", false);
+                }
+                pellets[value].SetBool("isActive", false);
+            }
+            else
+            {
+                pellets[value].SetBool("isActive", true);
+            }
             
+            /*
             for (int i = 0; i < EmotionPellets.Length; i++)
             {
                 if (i < currentEmotion)
@@ -84,13 +102,12 @@ public class OpponentManager : MonoBehaviour
                 {
                     EmotionPellets[i].sprite = emptyPellet;
                 }
-            }
+            }*/
 
             _currentEmotion = value;
             Debug.Log(name);
             
             PSM.currentState = 1;
-
         }
     }
     
@@ -139,15 +156,24 @@ public class OpponentManager : MonoBehaviour
             endStateValueWin = 7;
         }
 
-        
-        
-        
+
+        for (int i = 0; i < pellets.Length; i++)
+        {
+            if (i < 3)
+            {
+                pellets[i].SetBool("isActive", true);
+            }
+            else
+            {
+                pellets[i].SetBool("isActive", false);
+
+            }
+        }
         currentEmotion = 3;
     }
 
     public void OpponentSpeak()
     {
-        Debug.Log(currentEmotion);
         StartCoroutine(dialogueDisplayer(dialogue[currentEmotion]));
     }
 
