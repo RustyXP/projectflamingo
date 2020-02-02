@@ -31,8 +31,6 @@ public class TutorialManager : MonoBehaviour
 
     public PlayerListener PL;
     
-    private bool faceDetectEnabled = false;
-    
     void Start()
     {
         hasSmiled = false;
@@ -53,7 +51,7 @@ public class TutorialManager : MonoBehaviour
     IEnumerator tutorialTextDisplay(string textOutput, bool isEnd)
     {
         WaitForSeconds wait = new WaitForSeconds(0.05f);
-        faceDetectEnabled = false; 
+        PL.enableSearch = false; 
         
         string sr = "";
         string[] characters = new string[textOutput.Length];
