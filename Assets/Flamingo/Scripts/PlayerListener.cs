@@ -147,7 +147,6 @@ public class PlayerListener : ImageResultsListener
                 runTimer = false;
                 timer = 0.0f;
                 Debug.Log(emotion);
-                loadBar.color = okGreen;
                 if (emotion == "happy")
                 {
                     emotionIndex = 0;
