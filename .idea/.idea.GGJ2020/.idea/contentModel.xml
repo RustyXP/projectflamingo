@@ -58,6 +58,7 @@
           <e p="SoundManager.cs" t="Include" />
           <e p="SoundTrack.cs" t="Include" />
           <e p="TutorialManager.cs" t="Include" />
+          <e p="WinCutScene.cs" t="Include" />
         </e>
         <e p="StreamingAssets" t="Include">
           <e p="affdex-data-3" t="Include">
