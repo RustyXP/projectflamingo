@@ -12,6 +12,8 @@ public class TutorialManager : MonoBehaviour
     public GameObject tear;
 
     private bool _hasSmiled;
+    
+    
     public bool hasSmiled
     {
         get { return _hasSmiled; }
@@ -21,7 +23,10 @@ public class TutorialManager : MonoBehaviour
             {
                 StartCoroutine(tutorialTextDisplay(
                     "Hurray! Your encouraging smile has brought him some semblance of joy to his life!", true));
+                anim.SetBool("HasSmiled", true);
+
             }
+
 
             _hasSmiled = value;
         }
@@ -41,11 +46,10 @@ public class TutorialManager : MonoBehaviour
     void Update()
     {
         //make it look for smiling
-        if (PL.emotionIndex == 0)
+        if (PL.emotionIndex == 0 && !hasSmiled)
         {
             //disable timers
             hasSmiled = true;
-            anim.SetBool("HasSmiled", true);
 
             tear.SetActive(false);
         }

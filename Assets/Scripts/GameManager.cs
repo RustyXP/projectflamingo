@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
             default:
                 {
                     Debug.Log("You broke it. Are you happy now?");
-                    SceneManager.LoadScene("GameOverScene", LoadSceneMode.Single);
+                    SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
                     SoundManager.instance.PlayLevelSounds();
                     break;
                 }
