@@ -37,7 +37,8 @@ public class OpponentManager : MonoBehaviour
 
     public Sprite[] emotions;
 
- 
+    public int desiredEmotion;
+    
     public string[] dialogue;
 
     public int endStateValueWin, endStateValueLose;
@@ -110,6 +111,8 @@ public class OpponentManager : MonoBehaviour
         {
             name = "dad";
             dialogue = new string[7];
+
+            desiredEmotion = 0;
             
             dialogue[6] = "Aw shucks kid I love ya";
             dialogue[5] = "I will not disown you";

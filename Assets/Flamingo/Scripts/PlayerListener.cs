@@ -5,10 +5,17 @@ using Affdex;
 
 public class PlayerListener : ImageResultsListener
 {
-    float timer = 0.0f;
-    float cutOffTime = 3.0f;
-    bool runTimer = false;
-    string emotion = "";
+    public bool enableSearch;
+    
+    public float timer = 0.0f;
+    public float cutOffTime = 3.0f;
+    public bool runTimer = false;
+    public string emotion = "";
+    
+    
+
+    public int emotionIndex = -1;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +25,12 @@ public class PlayerListener : ImageResultsListener
     // Update is called once per frame
     void Update()
     {
-        if (runTimer)
+        if (enableSearch)
         {
-            timer += Time.deltaTime;
+            if (runTimer)
+            {
+                timer += Time.deltaTime;
+            }
         }
     }
 
@@ -34,11 +44,6 @@ public class PlayerListener : ImageResultsListener
     }
     public override void onImageResults(Dictionary<int, Face> faces)
     {
-        bool happy = false;
-        bool shocked = false;
-        bool lowInterest = false;
-        bool angry = false;
-        
         if (faces.Count > 0)
         {
             //If the player is happy start the timer
@@ -75,13 +80,33 @@ public class PlayerListener : ImageResultsListener
                 runTimer = false;
                 timer = 0.0f;
                 Debug.Log(emotion);
+                if (emotion == "happy")
+                {
+                    emotionIndex = 0;
+                }else if (emotion == "shocked")
+                {
+                    emotionIndex = 1;
+
+                }else if (emotion == "low interest")
+                {
+                    emotionIndex = 2;
+
+                }else if (emotion == "angry")
+                {
+                    emotionIndex = 3;
+
+                }
                 //Do stuff
             }
             //If they aren't showin any emotions we care about reset the timer and emotions
-            else if(faces[faces.Count - 1].Emotions[Affdex.Emotions.Joy] < 90.0f && faces[faces.Count - 1].Emotions[Affdex.Emotions.Surprise] < 90.0f && faces[faces.Count - 1].Expressions[Affdex.Expressions.Attention] > 50.0f && faces[faces.Count - 1].Expressions[Affdex.Expressions.BrowFurrow] < 90.0f)
+            else if(faces[faces.Count - 1].Emotions[Affdex.Emotions.Joy] < 
+                    90.0f && faces[faces.Count - 1].Emotions[Affdex.Emotions.Surprise] < 
+                    90.0f && faces[faces.Count - 1].Expressions[Affdex.Expressions.Attention] > 
+                    50.0f && faces[faces.Count - 1].Expressions[Affdex.Expressions.BrowFurrow] < 90.0f)
             {
                 runTimer = false;
                 emotion = "";
+                emotionIndex = -1;
             }
         }
     }

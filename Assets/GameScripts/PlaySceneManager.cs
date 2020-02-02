@@ -36,10 +36,12 @@ public class PlaySceneManager : MonoBehaviour
                 case 1: 
                     OM.OpponentSpeak();
                     PlayerReactionEnabled = false;
+                    PL.enableSearch = false;
                     break;
                 case 2:
                     CharTalking = false;
                     PlayerReactionEnabled = true;
+                    PL.enableSearch = true;
                     break;
             }
         }
@@ -49,8 +51,8 @@ public class PlaySceneManager : MonoBehaviour
     public bool CharTalking = false;
 
     public OpponentManager OM;
-    
 
+    public PlayerListener PL;
     
     // Start is called before the first frame update
     void Start()
@@ -61,17 +63,19 @@ public class PlaySceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (currentState == 2)
         {
-            //currentState = 1;
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            OM.currentEmotion++;
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            OM.currentEmotion--;
+            if (PL.emotionIndex != -1)
+            {
+                if (PL.emotionIndex == OM.desiredEmotion)
+                {
+                    OM.currentEmotion++;
+                }
+                else
+                {
+                    OM.currentEmotion--;
+                }
+            }
         }
     }
 
