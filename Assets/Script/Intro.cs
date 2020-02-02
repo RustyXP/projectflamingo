@@ -8,89 +8,71 @@ using UnityEngine.SceneManagement;
 public class Intro : MonoBehaviour {
     public GameObject black;
     public List<GameObject> texts;
-    public TMP_InputField textField;
+    public bool introOver;
 
-    private int _state = 0;
-    private bool _gotToNameScreen;
-    private bool _hasNameRun;
-    private bool _hasName;
-    public TextMeshProUGUI nameText;
-    private string _nameTextStart;
-    private string _nameTextEnd;
-    [HideInInspector] public string playerName;
-
-    //Intro Music
-    public AudioClip introMusicPart1;
-    public AudioClip introMusicPart2;
-
-    public void OnEdit() {
-        nameText.text = _nameTextStart + textField.text + _nameTextEnd;
-    }
-
-    IEnumerator waitForIntoMusic(float seconds)
+    private int frame;
+    private readonly int frameDuration = 3; //In seconds
+    private bool frameChanged;
+  
+    private void Awake()
     {
-        yield return new WaitForSeconds(seconds); // This statement will make the coroutine wait for the number of seconds you put there, 2 seconds in this case
-        SoundManager.instance.musicSource.UnPause();
-    }
+        Debug.Log("Intro awake!");
+        frame = 0;
+        frameChanged = false;
+        introOver = false;
+}
 
-    public void EndEdit() {
-        if(textField.text.Length == 0) return;
-        _hasName = true;
-        playerName = textField.text;
-        textField.gameObject.SetActive(false);
-    }
-
-    private void Update() {
-        if(Input.anyKeyDown || _hasNameRun) {
-            _hasNameRun = false;
-            switch(_state) {
-                case 0:
-                    if(!_gotToNameScreen) {
-                        black.SetActive(true);
-                        NextText();
-                        const string insertNameHere = "[Insert Name Here]";
-                        int i = nameText.text.IndexOf(insertNameHere, StringComparison.Ordinal);
-                        _nameTextStart = nameText.text.Substring(0, i);
-                        _nameTextEnd = nameText.text.Substring(i + insertNameHere.Length,
-                                                                nameText.text.Length - i - insertNameHere.Length);
-                        _gotToNameScreen = true;
-                    }
-                    if(_hasName) {
-                        _hasNameRun = true;
-                        _state++;
-                    }
-                    break;
-                case 1:
-                    StartIntroMusic();
-                    NextText();
-                    _state++;
-                    break;
-                case 2:
-                    NextText();
-                    _state++;
-                    break;
-                case 3:
-                    NextText();
-                    _state++;
-                    break;
-                case 4:
-                    NextText();
-                    _state++;
-                    break;
-                case 5:
-                    NextText();
-                    break;
-            }
+    private void Update()
+    {
+        if(frameChanged)
+        {
+            frameChanged = false; //Reset the flag
+            CallNextFrame();
+        }
+        if(introOver == true)
+        {
+            GameManager.instance.LoadNextLevel();
         }
     }
 
+    private void CallNextFrame()
+    {
+        Debug.Log("Switch frame: " + frame);
+        switch (frame)
+        {
+            case 0:
+                StartCoroutine(NextFrame());
+                NextText();
+                frame++;
+                break;
+            case 1:
+                StartCoroutine(NextFrame());
+                NextText();
+                frame++;
+                break;
+            case 2:
+                StartCoroutine(NextFrame());
+                NextText();
+                frame++;
+                break;
+            case 3:
+                StartCoroutine(NextFrame());
+                NextText();
+                frame++;
+                break;
+            default:
+                Debug.Log("Default frame in Intro Scene!");
+                GameManager.instance.LoadNextLevel();
+                break;
+        }
+    }
     private void NextText() {
-        if(_state < texts.Count) texts[_state].SetActive(true);
-        StartCoroutine(FadeIn(_state < texts.Count ? texts[_state] : null, _state >= 1 ? texts[_state - 1] : null));
+        if(frame < texts.Count) texts[frame].SetActive(true);
+        StartCoroutine(FadeIn(frame < texts.Count ? texts[frame] : null, frame >= 1 ? texts[frame - 1] : null));
     }
 
     private static IEnumerator FadeIn(GameObject newObj, GameObject oldObj) {
-        const float time = 1;
+        const float time = 3;
         float timeLeft = time;
         var text = newObj?.GetComponent<TextMeshProUGUI>();
         var textOld = oldObj?.GetComponent<TextMeshProUGUI>();
@@ -103,17 +85,9 @@ public class Intro : MonoBehaviour {
         oldObj?.SetActive(false);
         if (text == null)
         {
-            Destroy(GameObject.Find("SoundManager"));
-            SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
+            Debug.Log("Out of text. Let's move on!");
+            GameManager.instance.LoadNextLevel();
         }
-    }
-
-    private void StartIntroMusic()
-    {
-        SoundManager.instance.musicSource.Pause();
-        SoundManager.instance.sfxSource.PlayOneShot(introMusicPart1);
-        waitForIntoMusic(20);
-        SoundManager.instance.musicSource.UnPause();
     }
 
     private static IEnumerator FadeInHiglight(GameObject newObj, GameObject oldObj) {
@@ -129,4 +103,16 @@ public class Intro : MonoBehaviour {
         }
         oldObj?.SetActive(false);
     }
+
+
+    IEnumerator NextFrame()
+    {
+        Debug.Log("Wait...");
+        //yield on a new YieldInstruction that waits for X seconds.
+        yield return new WaitForSeconds(frameDuration);
+        frame++;
+        frameChanged = true;
+        Debug.Log("frame: " + frame);
+    }
+
 }
