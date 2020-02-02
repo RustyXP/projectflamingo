@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundTrack 
+public class MixerTrack
 {
     public int id;
     public AudioSource audioSource;

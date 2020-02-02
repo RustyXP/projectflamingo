@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
-    public static List<SoundTrack> soundList = new List<SoundTrack>();
+    public static List<MixerTrack> mixerTrackList = new List<MixerTrack>();
 
     private static float clipLength;
     private static bool keepFadingIn;
@@ -25,36 +25,36 @@ public class SoundManager : MonoBehaviour
         {
             for(int i = 0; i < numberOfTracks; i++)
             {
-                SoundTrack track = new SoundTrack
+                MixerTrack track = new MixerTrack
                 {
                     id = 1,
                     audioSource = gameObj.AddComponent<AudioSource>()
                 };
-                soundList.Add(track);
+                mixerTrackList.Add(track);
             }
         }
     }
 
     static public void TrackSettings(int track, AudioMixer mainMix, string audioGroup, float trackVolume, bool loop = false)
     {
-        soundList[track].audioSource.outputAudioMixerGroup = mainMix.FindMatchingGroups(audioGroup)[0];
-        soundList[track].trackVolume = trackVolume;
-        soundList[track].loop = loop;
+        mixerTrackList[track].audioSource.outputAudioMixerGroup = mainMix.FindMatchingGroups(audioGroup)[0];
+        mixerTrackList[track].trackVolume = trackVolume;
+        mixerTrackList[track].loop = loop;
     }
 
     static public void PlayAudio(int track, AudioClip audioClip = null, List<AudioClip> listAudioClip = null, int min = -2, int max = -2)
     {
-        if(audioClip != null && listAudioClip == null && soundList[track].audioSource.isPlaying == false)
+        if(audioClip != null && listAudioClip == null && mixerTrackList[track].audioSource.isPlaying == false)
         {
-            soundList[track].audioSource.PlayOneShot(audioClip, soundList[track].trackVolume);
+            mixerTrackList[track].audioSource.PlayOneShot(audioClip, mixerTrackList[track].trackVolume);
         }
 
-        if(soundList[track].loop)
+        if(mixerTrackList[track].loop)
         {
             clipLength = audioClip.length;
         }
 
-        if (audioClip == null && listAudioClip != null && soundList[track].audioSource.isPlaying == false)
+        if (audioClip == null && listAudioClip != null && mixerTrackList[track].audioSource.isPlaying == false)
         {
             int index = Random.Range(min, max);
 
@@ -64,11 +64,11 @@ public class SoundManager : MonoBehaviour
             }
             else
             {
-                soundList[track].audioSource.PlayOneShot(listAudioClip[index], soundList[track].trackVolume);
+                mixerTrackList[track].audioSource.PlayOneShot(listAudioClip[index], mixerTrackList[track].trackVolume);
                 clipLength = listAudioClip[index].length;
             }
 
-            if(soundList[track].loop)
+            if(mixerTrackList[track].loop)
             {
                 //Keep on looping!
             }
@@ -90,13 +90,13 @@ public class SoundManager : MonoBehaviour
     {
         keepFadingIn = true;
         keepFadingOut = false;
-        soundList[track].audioSource.volume = 0;
-        float audioVolume = soundList[track].audioSource.volume;
+        mixerTrackList[track].audioSource.volume = 0;
+        float audioVolume = mixerTrackList[track].audioSource.volume;
 
-        while(soundList[track].audioSource.volume < maxVolume && keepFadingIn)
+        while(mixerTrackList[track].audioSource.volume < maxVolume && keepFadingIn)
         {
             audioVolume += speed;
-            soundList[track].audioSource.volume = audioVolume;
+            mixerTrackList[track].audioSource.volume = audioVolume;
             yield return new WaitForSeconds(0.1f);
         }
     }
@@ -105,13 +105,13 @@ public class SoundManager : MonoBehaviour
     {
         keepFadingIn = false;
         keepFadingOut = true;
-        soundList[track].audioSource.volume = 0;
-        float audioVolume = soundList[track].audioSource.volume;
+        mixerTrackList[track].audioSource.volume = 0;
+        float audioVolume = mixerTrackList[track].audioSource.volume;
 
-        while(soundList[track].audioSource.volume > speed && keepFadingOut)
+        while(mixerTrackList[track].audioSource.volume > speed && keepFadingOut)
         {
             audioVolume -= speed;
-            soundList[track].audioSource.volume = audioVolume;
+            mixerTrackList[track].audioSource.volume = audioVolume;
             yield return new WaitForSeconds(0.1f);
         }
     }
@@ -145,61 +145,101 @@ public class SoundManager : MonoBehaviour
         sfxSource.Play();
     }
 
+
+    public void PlayGameOverSounds()
+    {
+        SoundManager.CallFadeOut(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+        SoundManager.CallFadeOut(1, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
+
+        SoundManager.PlayAudio(0, soundTrackList[7]);
+        SoundManager.CallFadeIn(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+        SoundManager.PlayAudio(1, sfxList[1]);
+        SoundManager.CallFadeIn(0, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
+    }
+
+    public void PlayYouWinSounds()
+    {
+        SoundManager.CallFadeOut(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+        SoundManager.CallFadeOut(1, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
+
+        SoundManager.PlayAudio(0, soundTrackList[8]);
+        SoundManager.CallFadeIn(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+    }
+
     public void PlayLevelSounds()
     {
-        Debug.Log("Play Sounds for Level " + GameManager.instance.level);
+        int soundLevel = GameManager.instance.level;
+        Debug.Log("Play Sounds for Level " + soundLevel);
 
-        switch (GameManager.instance.level)
+        switch ((soundLevel))
         {
             case 0: //Smile to start
                 {
                     Debug.Log("Sounds for Level 0 loading");
-                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.soundList[0].trackVolume);
+                    Debug.Log("Music should be: " + soundTrackList[0].name);
+                    Debug.Log("And: " + soundTrackList[1].name);
+
+                    SoundManager.CallFadeOut(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+                    SoundManager.CallFadeOut(1, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
+
+                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+                    SoundManager.CallFadeIn(1, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
                     SoundManager.PlayAudio(0, soundTrackList[0]);
-                    SoundManager.CallFadeIn(1, 0.01f, SoundManager.soundList[1].trackVolume);
                     SoundManager.PlayAudio(1, soundTrackList[1]);
                     break;
                 }
             case 1: //Intro
                 {
                     Debug.Log("Sounds for Level 1 loading");
-                    SoundManager.CallFadeOut(0, 0.01f, SoundManager.soundList[0].trackVolume);
-                    SoundManager.CallFadeOut(1, 0.01f, SoundManager.soundList[1].trackVolume);
+                    Debug.Log("Music should be: " + soundTrackList[3].name);
+                    Debug.Log("And: " + sfxList[0].name);
+                    SoundManager.CallFadeOut(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+                    SoundManager.CallFadeOut(1, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
 
-                    SoundManager.PlayAudio(0, soundTrackList[3]);
-                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.soundList[0].trackVolume);
+                    SoundManager.PlayAudio(0, soundTrackList[2]);
+                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+
                     SoundManager.PlayAudio(1, sfxList[0]);
-                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.soundList[1].trackVolume);
+                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
                     break;
                 }
             case 2: //Tutorial
                 {
                     Debug.Log("Sounds for Level 2 loading");
-                    SoundManager.CallFadeOut(0, 0.01f, SoundManager.soundList[0].trackVolume);
-                    SoundManager.CallFadeOut(1, 0.01f, SoundManager.soundList[1].trackVolume);
+                    SoundManager.CallFadeOut(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+                    SoundManager.CallFadeOut(1, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
 
-                    SoundManager.PlayAudio(0, soundTrackList[4]);
-                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.soundList[0].trackVolume);
+                    SoundManager.PlayAudio(0, soundTrackList[3]);
+                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
                     break;
                 }
-            case 3: //Play Scene
+            case 3: //Dinner Scene
                 {
-                    SoundManager.CallFadeOut(0, 0.01f, SoundManager.soundList[0].trackVolume);
-                    SoundManager.CallFadeOut(1, 0.01f, SoundManager.soundList[1].trackVolume);
+                    SoundManager.CallFadeOut(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+                    SoundManager.CallFadeOut(1, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
+
+                    SoundManager.PlayAudio(0, soundTrackList[4]);
+                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+                    break;
+                }
+            case 4: //Play Scene
+                {
+                    SoundManager.CallFadeOut(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+                    SoundManager.CallFadeOut(1, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
 
                     SoundManager.PlayAudio(0, soundTrackList[5]);
-                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.soundList[0].trackVolume);
+                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
                     break;
                 }
             default: //Game Over
                 {
-                    SoundManager.CallFadeOut(0, 0.01f, SoundManager.soundList[0].trackVolume);
-                    SoundManager.CallFadeOut(1, 0.01f, SoundManager.soundList[1].trackVolume);
+                    SoundManager.CallFadeOut(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
+                    SoundManager.CallFadeOut(1, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
 
                     SoundManager.PlayAudio(0, soundTrackList[7]);
-                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.soundList[0].trackVolume);
+                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.mixerTrackList[0].trackVolume);
                     SoundManager.PlayAudio(1, sfxList[1]);
-                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.soundList[1].trackVolume);
+                    SoundManager.CallFadeIn(0, 0.01f, SoundManager.mixerTrackList[1].trackVolume);
                     break;
                 }
         }

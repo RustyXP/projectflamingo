@@ -58,34 +58,42 @@ public class GameManager : MonoBehaviour
         {
             case 0:
                 {
-                    level++;
                     Debug.Log("Loading Smile to Start Scene...");
                     SceneManager.LoadScene("SmileToStart", LoadSceneMode.Single);
                     SoundManager.instance.PlayLevelSounds();
+                    level++;
                     break;
                 }
             case 1:
                 {
-                    level++;
                     Debug.Log("Loading Text Intro Scene...");
                     SceneManager.LoadScene("TextIntroScene", LoadSceneMode.Single);
                     SoundManager.instance.PlayLevelSounds();
+                    level++;
                     break;
                 }
             case 2:
                 {
-                    level++;
                     Debug.Log("Loading Tutorial Scene...");
                     SceneManager.LoadScene("TutorialScene", LoadSceneMode.Single);
                     SoundManager.instance.PlayLevelSounds();
+                    level++;
                     break;
                 }
             case 3:
                 {
+                    Debug.Log("Loading Dinner Table Scene...");
+                    SceneManager.LoadScene("DinnerScene", LoadSceneMode.Single);
+                    SoundManager.instance.PlayLevelSounds();
                     level++;
+                    break;
+                }
+            case 4:
+                {
                     Debug.Log("Loading Play Scene...");
                     SceneManager.LoadScene("PlayScene", LoadSceneMode.Single);
                     SoundManager.instance.PlayLevelSounds();
+                    level++;
                     break;
                 }
             default:
@@ -100,9 +108,9 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ReloadSmileToStart()
     {
-        Debug.Log("Pause 5 seconds");
+        Debug.Log("Pause 10 seconds");
         //yield on a new YieldInstruction that waits for X seconds.
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         level = 0;
         LoadNextLevel();
     }
