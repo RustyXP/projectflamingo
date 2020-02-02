@@ -2,25 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Audio;
-
 
 public class SmileToStart : MonoBehaviour
 {
-    public bool smiling = false;
-    // Start is called before the first frame update
+    public PlayerListener PL;
 
-    void Awake()
+    private bool _hasSmiled;
+    public bool hasSmiled
     {
-        smiling = false;
+        get { return _hasSmiled; }
+        set
+        {
+            _hasSmiled = value;
+        }
+    }
+
+    void Start()
+    {
+        hasSmiled = false;
+        PL.enableSearch = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(smiling == true)
+        //make it look for smiling
+        if (PL.enableSearch && PL.timer > PL.cutOffTime)
         {
-            //SceneManager.LoadScene("TextIntroScene", LoadSceneMode.Single);
+            //disable timers
+            hasSmiled = true;
             GameManager.instance.LoadNextLevel();
         }
     }
