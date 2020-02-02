@@ -39,11 +39,8 @@
             <e p="music_placement.txt" t="Include" />
           </e>
         </e>
-        <e p="GameScripts" t="Include">
-          <e p="OpponentManager.cs" t="Include" />
-          <e p="PlaySceneManager.cs" t="Include" />
-        </e>
         <e p="Scripts" t="Include">
+          <e p="DinnerScene.cs" t="Include" />
           <e p="FacialExpression.cs" t="Include" />
           <e p="FadeMixerGroup.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />

@@ -61,7 +61,6 @@ public class OpponentManager : MonoBehaviour
         get { return _currentEmotion; }
         set
         {
-            Debug.Log(value + "CE");
             anim.SetInteger("Emotion", value);
             
             if (value == endStateValueLose)

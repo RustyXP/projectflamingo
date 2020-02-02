@@ -21,6 +21,7 @@
       <Path>Logs</Path>
       <Path>Temp</Path>
       <Path>__MACOSX</Path>
+      <Path>buildmac</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>
