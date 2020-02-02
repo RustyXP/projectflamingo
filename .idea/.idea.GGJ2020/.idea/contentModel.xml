@@ -54,6 +54,7 @@
           <e p="FacialExpression.cs" t="Include" />
           <e p="FadeMixerGroup.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="GameOver.cs" t="Include" />
           <e p="ImageResultsParser.cs" t="Include" />
           <e p="Intro.cs" t="Include" />
           <e p="LevelIntroScreen.cs" t="Include" />

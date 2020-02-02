@@ -27,7 +27,7 @@ public class SmileToStart : MonoBehaviour
     void Update()
     {
         //make it look for smiling
-        if (PL.enableSearch && PL.timer > PL.cutOffTime)
+        if (PL.enableSearch && PL.timer > PL.cutOffTime && PL.emotion == "")
         {
             //disable timers
             hasSmiled = true;

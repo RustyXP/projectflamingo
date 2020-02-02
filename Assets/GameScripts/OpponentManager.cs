@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 /*
@@ -29,7 +30,7 @@ public class OpponentManager : MonoBehaviour
     
     public string name;
 
-    //0 = Dad, 1 = mom, 2 = kid
+    //0 = Dad, 1 = mom
     public int id;
 
     public SpriteRenderer bodySR, faceSR;
@@ -52,6 +53,7 @@ public class OpponentManager : MonoBehaviour
     public Image[] EmotionPellets;
     public Sprite filledPellet, emptyPellet;
 
+    public AnimatorController[] anims;
     public Animator anim;
 
     public GameObject greyOut;
@@ -116,6 +118,8 @@ public class OpponentManager : MonoBehaviour
             name = "dad";
             dialogue = new string[7];
 
+            //anim = anims[0];
+
             //happiness
             desiredEmotion = 0;
             
@@ -134,6 +138,8 @@ public class OpponentManager : MonoBehaviour
             name = "mom";
             dialogue = new string[7];
 
+            //anim = anims[1];
+
             //Change emotion
             desiredEmotion = 0;
             
@@ -149,29 +155,6 @@ public class OpponentManager : MonoBehaviour
             endStateValueWin = 7;
         }
 
-        else if (id == 2)
-        {
-            name = "bro";
-            dialogue = new string[7];
-
-            //change emotion
-            desiredEmotion = 0;
-            
-            dialogue[6] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
-            dialogue[5] = "We're really trying to work together, though… I believe we can do this.";
-            dialogue[4] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
-            dialogue[3] = "You know your mother and I are having some… disagreements, right?";
-            dialogue[2] = "I'm trying to talk to you. Can't you see that?";
-            dialogue[1] = "Enough. Listen to me while I'm talking to you.";
-            dialogue[0] = "I am through with not being listened to in my own house!";
-
-            endStateValueLose = 0;
-            endStateValueWin = 7;
-        }
-        else
-        {
-            
-        }
         
         
         
