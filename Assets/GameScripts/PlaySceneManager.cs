@@ -85,25 +85,30 @@ public class PlaySceneManager : MonoBehaviour
 
     public void sceneLost()
     {
-        Debug.Log("oh no you suck");
+        StartCoroutine(changeScene(false));
     }
 
     public void sceneWon()
     {
-        Debug.Log("yay no divorce!");
+        StartCoroutine(changeScene(true));
 
     }
 
-    public IEnumerator changeScene(string targetScene)
+    public IEnumerator changeScene(bool win)
     {
         WaitForSeconds wait = new WaitForSeconds(2f);
 
         yield return wait;
 
-        SceneManager.LoadScene(targetScene);
+        if (win)
+        {
+            GameManager.instance.YouWin();
+        }
+        else
+        {
+            GameManager.instance.GameOver();
+        }
     }
     
-    
-
     
 }
