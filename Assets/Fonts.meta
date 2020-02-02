@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Fonts.meta
+guid: 783106ce5abdebd48a666a3b0557adf5
+=======
 guid: 3b0b14c99b70f024890a2c1fd5468f16
+>>>>>>> d033e7293ccd936c5e0cfeada9c2cdf6c2937175:Assets/Affdex/Plugins/iOS.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
