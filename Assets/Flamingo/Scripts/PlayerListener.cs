@@ -111,7 +111,7 @@ public class PlayerListener : ImageResultsListener
             //Sad is set to be really sensetive
             else if (faces[faces.Count - 1].Expressions[Affdex.Expressions.LipCornerDepressor] > 5.0f && !runTimer)
             {
-                timer = 3.0f;
+                timer = 0.0f;
                 emotion = "sad";
                 runTimer = true;
                 if (label)
