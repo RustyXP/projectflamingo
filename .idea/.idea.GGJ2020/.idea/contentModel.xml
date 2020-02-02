@@ -47,16 +47,15 @@
           <e p="GameOver.cs" t="Include" />
           <e p="ImageResultsParser.cs" t="Include" />
           <e p="IntroScript.cs" t="Include" />
-          <e p="LevelIntroducer.cs" t="Include" />
           <e p="Loader.cs" t="Include" />
           <e p="MixAudioLevels.cs" t="Include" />
+          <e p="MixerTrack.cs" t="Include" />
           <e p="OpponentManager.cs" t="Include" />
           <e p="PlayerCam.cs" t="Include" />
           <e p="PlayerListener.cs" t="Include" />
           <e p="PlaySceneManager.cs" t="Include" />
           <e p="SmileToStart.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />
-          <e p="SoundTrack.cs" t="Include" />
           <e p="TutorialManager.cs" t="Include" />
           <e p="WinCutScene.cs" t="Include" />
         </e>

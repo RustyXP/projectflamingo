@@ -19,7 +19,6 @@ public class TutorialManager : MonoBehaviour
         {
             if (value)
             {
-                anim.SetBool("HasSmiled", true);
                 StartCoroutine(tutorialTextDisplay(
                     "Hurray! Your encouraging smile has brought him some semblance of joy to his life!", true));
             }
@@ -42,10 +41,13 @@ public class TutorialManager : MonoBehaviour
     void Update()
     {
         //make it look for smiling
-        if (PL.timer > PL.cutOffTime && PL.emotion == "happy")
+        if (PL.emotionIndex == 0)
         {
             //disable timers
             hasSmiled = true;
+            anim.SetBool("HasSmiled", true);
+
+            tear.SetActive(false);
         }
     }
     

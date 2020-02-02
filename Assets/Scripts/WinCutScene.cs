@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class WinCutScene : MonoBehaviour
 {
     public string[] script;
+    
 
     public string[] Preachyscript;
 
@@ -110,7 +111,6 @@ public class WinCutScene : MonoBehaviour
 /*
     IEnumerator preach(int index)
     {
-        bubble.sprite = bubbles[speakorder[ind]];
         anims[speakorder[ind]].SetBool("isTalking", true);
         
         string sr = "";
