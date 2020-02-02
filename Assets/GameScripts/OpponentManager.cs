@@ -52,7 +52,8 @@ public class OpponentManager : MonoBehaviour
     public Sprite filledPellet, emptyPellet;
 
     public Animator anim;
-    
+
+    public GameObject greyOut;
     
     private int _currentEmotion;
     public int currentEmotion
@@ -114,13 +115,13 @@ public class OpponentManager : MonoBehaviour
 
             desiredEmotion = 0;
             
-            dialogue[6] = "Aw shucks kid I love ya";
-            dialogue[5] = "I will not disown you";
-            dialogue[4] = "Hah I guess thats ok";
-            dialogue[3] = "Neutral Feel";
-            dialogue[2] = "I am mildly mad";
-            dialogue[1] = "You disappoint your ancestors";
-            dialogue[0] = "I am going to destroy everything you love";
+            dialogue[6] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
+            dialogue[5] = "We're really trying to work together, though… I believe we can do this.";
+            dialogue[4] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
+            dialogue[3] = "You know your mother and I are having some… disagreements, right?";
+            dialogue[2] = "I'm trying to talk to you. Can't you see that?";
+            dialogue[1] = "Enough. Listen to me while I'm talking to you.";
+            dialogue[0] = "I am through with not being listened to in my own house!";
 
             endStateValueLose = 0;
             endStateValueWin = 7;
@@ -138,6 +139,7 @@ public class OpponentManager : MonoBehaviour
 
     IEnumerator dialogueDisplayer(string splitDialogue)
     {
+        greyOut.SetActive(true);
         anim.SetBool("IsTalking", true);
         string sr = "";
         string[] characters = new string[splitDialogue.Length];
@@ -157,10 +159,10 @@ public class OpponentManager : MonoBehaviour
         int bufferTime = 2;
         for (int i = 0; i < bufferTime; i++)
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1.2f);
         }
         PSM.CharTalking = false;
         PSM.currentState = 2;
-
+        greyOut.SetActive(false);
     }
 }
