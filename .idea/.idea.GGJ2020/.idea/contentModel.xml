@@ -39,6 +39,11 @@
             <e p="music_placement.txt" t="Include" />
           </e>
         </e>
+        <e p="Flamingo" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="PlayerListener.cs" t="Include" />
+          </e>
+        </e>
         <e p="GameScripts" t="Include">
           <e p="OpponentManager.cs" t="Include" />
           <e p="PlaySceneManager.cs" t="Include" />

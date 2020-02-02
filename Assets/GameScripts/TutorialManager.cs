@@ -20,8 +20,8 @@ public class TutorialManager : MonoBehaviour
             if (value)
             {
                 anim.SetBool("HasSmiled", true);
-                tutorialTextDisplay(
-                    "Hurray! Your encouraging smile has brought him some semblance of joy to his life!", true);
+                StartCoroutine(tutorialTextDisplay(
+                    "Hurray! Your encouraging smile has brought him some semblance of joy to his life!", true));
             }
 
             _hasSmiled = value;
@@ -38,6 +38,14 @@ public class TutorialManager : MonoBehaviour
             tutorialTextDisplay("Your brother is feeling down. Maybe you should smile at him to encourage him!", false));
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            hasSmiled = true;
+        }
+    }
+    
     IEnumerator tutorialTextDisplay(string textOutput, bool isEnd)
     {
         WaitForSeconds wait = new WaitForSeconds(0.05f);

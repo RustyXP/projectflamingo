@@ -15,10 +15,13 @@
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
+      <Path>Affdex</Path>
       <Path>Assetupload</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>
+      <Path>UnityChan</Path>
+      <Path>__MACOSX</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>
