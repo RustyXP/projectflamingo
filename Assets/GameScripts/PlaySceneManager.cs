@@ -53,6 +53,8 @@ public class PlaySceneManager : MonoBehaviour
     public OpponentManager OM;
 
     public PlayerListener PL;
+
+    public Text emotionLabel;
     
     // Start is called before the first frame update
     void Start()

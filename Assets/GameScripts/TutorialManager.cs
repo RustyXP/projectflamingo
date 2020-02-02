@@ -27,8 +27,10 @@ public class TutorialManager : MonoBehaviour
             _hasSmiled = value;
         }
     }
-    
 
+
+    public PlayerListener PL;
+    
     private bool faceDetectEnabled = false;
     
     void Start()
@@ -40,8 +42,10 @@ public class TutorialManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        //make it look for smiling
+        if (PL.enableSearch && PL.timer > PL.cutOffTime)
         {
+            //disable timers
             hasSmiled = true;
         }
     }
@@ -64,6 +68,8 @@ public class TutorialManager : MonoBehaviour
             yield return wait;
         }
 
+        PL.enableSearch = true;
+        
         if (isEnd)
         {
             //do something before changing to the next screen

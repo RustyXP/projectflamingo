@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Affdex;
+using UnityEngine.UI;
 
 public class PlayerListener : ImageResultsListener
 {
@@ -11,15 +12,27 @@ public class PlayerListener : ImageResultsListener
     public float cutOffTime = 3.0f;
     public bool runTimer = false;
     public string emotion = "";
-    
-    
 
+    public Text uiOutput;
+
+    private bool label;
     public int emotionIndex = -1;
+
+    public Image loadBar;
+
+    public Color grey, midGreen, okGreen;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (uiOutput != null)
+        {
+            label = true;
+        }
+
+        loadBar.type = Image.Type.Filled;
+        loadBar.fillMethod = 0;
+        loadBar.fillAmount = 0;
     }
 
     // Update is called once per frame
@@ -30,11 +43,20 @@ public class PlayerListener : ImageResultsListener
             if (runTimer)
             {
                 timer += Time.deltaTime;
+                Debug.Log(loadBar.fillAmount);
+                loadBar.fillAmount = timer / cutOffTime;
+                loadBar.color = Color.Lerp(grey, midGreen, timer/cutOffTime);
+            }else{
+                if (loadBar.fillAmount > 0) 
+                {
+                    loadBar.fillAmount -= 0.1f;
+                }
             }
         }
         else
         {
             enableSearch = false;
+            
         }
     }
 
@@ -56,6 +78,11 @@ public class PlayerListener : ImageResultsListener
                 timer = 0.0f;
                 emotion = "happy";
                 runTimer = true;
+                if (label)
+                {
+                    uiOutput.text = "Happy";
+                }
+                
             }
             //Or if they are shocked
             else if(faces[faces.Count - 1].Emotions[Affdex.Emotions.Surprise] > 90.0f && !runTimer)
@@ -63,6 +90,10 @@ public class PlayerListener : ImageResultsListener
                 timer = 0.0f;
                 emotion = "shocked";
                 runTimer = true;
+                if (label)
+                {
+                    uiOutput.text = "Shocked";
+                }
             }
             //Or if they are not interested
             else if(faces[faces.Count - 1].Expressions[Affdex.Expressions.Attention] < 50.0f && !runTimer)
@@ -70,6 +101,10 @@ public class PlayerListener : ImageResultsListener
                 timer = 0.0f;
                 runTimer = true;
                 emotion = "low interest";
+                if (label)
+                {
+                    uiOutput.text = "Uninterested";
+                }
             }
             //Or if they are angry
             else if(faces[faces.Count - 1].Expressions[Affdex.Expressions.BrowFurrow] > 90.0f && faces[faces.Count - 1].Expressions[Affdex.Expressions.Smile] < 20.0f && !runTimer)
@@ -77,6 +112,10 @@ public class PlayerListener : ImageResultsListener
                 timer = 0.0f;
                 emotion = "angry";
                 runTimer = true;
+                if (label)
+                {
+                    uiOutput.text = "Angry";
+                }
             }
             //If they display the emotion for a fixed time do stuff
             else if(timer >= cutOffTime)
@@ -84,6 +123,7 @@ public class PlayerListener : ImageResultsListener
                 runTimer = false;
                 timer = 0.0f;
                 Debug.Log(emotion);
+                loadBar.color = okGreen;
                 if (emotion == "happy")
                 {
                     emotionIndex = 0;
@@ -100,6 +140,8 @@ public class PlayerListener : ImageResultsListener
                     emotionIndex = 3;
 
                 }
+
+                loadBar.fillAmount = 0;
                 //Do stuff
             }
             //If they aren't showin any emotions we care about reset the timer and emotions
@@ -111,6 +153,10 @@ public class PlayerListener : ImageResultsListener
                 runTimer = false;
                 emotion = "";
                 emotionIndex = -1;
+                if (label)
+                {
+                    uiOutput.text = "Unclear";
+                }
             }
         }
     }
