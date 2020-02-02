@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     public void YouWin()
     {
         Debug.Log("You won!");
-        SceneManager.LoadScene("YouRepairedYourHome", LoadSceneMode.Single);
+        SceneManager.LoadScene("YouWin", LoadSceneMode.Single);
         enabled = false;
         level = 0;
 
