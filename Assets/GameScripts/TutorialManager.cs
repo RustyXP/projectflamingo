@@ -76,6 +76,7 @@ public class TutorialManager : MonoBehaviour
             for (int i = 0; i < 3; i++)
             {
                 yield return wait;
+                GameManager.instance.LoadNextLevel();
             }
         }
     }

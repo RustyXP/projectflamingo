@@ -48,7 +48,6 @@ public class IntroScript : MonoBehaviour {
         else
         {
             introOver = true;
-            GameManager.instance.LoadNextLevel();
         }
     }
 
