@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayerListener : ImageResultsListener
 {
     public bool enableSearch;
-    
+
     public float timer = 0.0f;
     public float cutOffTime = 3.0f;
     public bool runTimer = false;
@@ -21,7 +21,7 @@ public class PlayerListener : ImageResultsListener
     public Image loadBar;
 
     public Color grey, midGreen, okGreen;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,9 +45,11 @@ public class PlayerListener : ImageResultsListener
                 timer += Time.deltaTime;
                 Debug.Log(loadBar.fillAmount);
                 loadBar.fillAmount = timer / cutOffTime;
-                loadBar.color = Color.Lerp(grey, midGreen, timer/cutOffTime);
-            }else{
-                if (loadBar.fillAmount > 0) 
+                loadBar.color = Color.Lerp(grey, midGreen, timer / cutOffTime);
+            }
+            else
+            {
+                if (loadBar.fillAmount > 0)
                 {
                     loadBar.fillAmount -= 0.1f;
                 }
@@ -56,7 +58,7 @@ public class PlayerListener : ImageResultsListener
         else
         {
             enableSearch = false;
-            
+
         }
     }
 
@@ -82,10 +84,10 @@ public class PlayerListener : ImageResultsListener
                 {
                     uiOutput.text = "Happy";
                 }
-                
+
             }
             //Or if they are shocked
-            else if(faces[faces.Count - 1].Emotions[Affdex.Emotions.Surprise] > 90.0f && !runTimer)
+            else if (faces[faces.Count - 1].Emotions[Affdex.Emotions.Surprise] > 90.0f && !runTimer)
             {
                 timer = 0.0f;
                 emotion = "shocked";
@@ -95,8 +97,30 @@ public class PlayerListener : ImageResultsListener
                     uiOutput.text = "Shocked";
                 }
             }
+            //If they do a kissing face they are showing love
+            else if (faces[faces.Count - 1].Expressions[Affdex.Expressions.LipPucker] > 85.0f && !runTimer)
+            {
+                timer = 0.0f;
+                emotion = "affection";
+                runTimer = true;
+                if (label)
+                {
+                    uiOutput.text = "Affection";
+                }
+            }
+            //Sad is set to be really sensetive
+            else if (faces[faces.Count - 1].Expressions[Affdex.Expressions.LipCornerDepressor] > 5.0f && !runTimer)
+            {
+                timer = 3.0f;
+                emotion = "sad";
+                runTimer = true;
+                if (label)
+                {
+                    uiOutput.text = "Sad";
+                }
+            }
             //Or if they are not interested
-            else if(faces[faces.Count - 1].Expressions[Affdex.Expressions.Attention] < 50.0f && !runTimer)
+            else if (faces[faces.Count - 1].Expressions[Affdex.Expressions.Attention] < 50.0f && !runTimer)
             {
                 timer = 0.0f;
                 runTimer = true;
@@ -107,7 +131,7 @@ public class PlayerListener : ImageResultsListener
                 }
             }
             //Or if they are angry
-            else if(faces[faces.Count - 1].Expressions[Affdex.Expressions.BrowFurrow] > 90.0f && faces[faces.Count - 1].Expressions[Affdex.Expressions.Smile] < 20.0f && !runTimer)
+            else if (faces[faces.Count - 1].Expressions[Affdex.Expressions.BrowFurrow] > 90.0f && faces[faces.Count - 1].Expressions[Affdex.Expressions.Smile] < 20.0f && !runTimer)
             {
                 timer = 0.0f;
                 emotion = "angry";
@@ -118,7 +142,7 @@ public class PlayerListener : ImageResultsListener
                 }
             }
             //If they display the emotion for a fixed time do stuff
-            else if(timer >= cutOffTime)
+            else if (timer >= cutOffTime)
             {
                 runTimer = false;
                 timer = 0.0f;
@@ -127,28 +151,40 @@ public class PlayerListener : ImageResultsListener
                 if (emotion == "happy")
                 {
                     emotionIndex = 0;
-                }else if (emotion == "shocked")
+                }
+                else if (emotion == "shocked")
                 {
                     emotionIndex = 1;
 
-                }else if (emotion == "low interest")
+                }
+                else if (emotion == "low interest")
                 {
                     emotionIndex = 2;
 
-                }else if (emotion == "angry")
+                }
+                else if (emotion == "angry")
                 {
                     emotionIndex = 3;
-
+                }
+                else if (emotion == "sad")
+                {
+                    emotionIndex = 4;
+                }
+                else if (emotion == "affection")
+                {
+                    emotionIndex = 5;
                 }
 
                 loadBar.fillAmount = 0;
                 //Do stuff
             }
             //If they aren't showin any emotions we care about reset the timer and emotions
-            else if(faces[faces.Count - 1].Emotions[Affdex.Emotions.Joy] < 
-                    90.0f && faces[faces.Count - 1].Emotions[Affdex.Emotions.Surprise] < 
-                    90.0f && faces[faces.Count - 1].Expressions[Affdex.Expressions.Attention] > 
-                    50.0f && faces[faces.Count - 1].Expressions[Affdex.Expressions.BrowFurrow] < 90.0f)
+            else if (faces[faces.Count - 1].Emotions[Affdex.Emotions.Joy] < 90.0f
+                    && faces[faces.Count - 1].Emotions[Affdex.Emotions.Surprise] < 90.0f
+                    && faces[faces.Count - 1].Expressions[Affdex.Expressions.LipPucker] < 90.0f
+                    && faces[faces.Count - 1].Expressions[Affdex.Expressions.LipCornerDepressor] < 3.0f
+                    && faces[faces.Count - 1].Expressions[Affdex.Expressions.Attention] > 50.0f
+                    && faces[faces.Count - 1].Expressions[Affdex.Expressions.BrowFurrow] < 90.0f)
             {
                 runTimer = false;
                 emotion = "";

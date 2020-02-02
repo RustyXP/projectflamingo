@@ -29,11 +29,12 @@ public class OpponentManager : MonoBehaviour
     
     public string name;
 
+    //0 = Dad, 1 = mom, 2 = kid
     public int id;
 
     public SpriteRenderer bodySR, faceSR;
 
-    public Sprite bodySprite;
+    public Sprite[] bodySprite;
 
     public Sprite[] emotions;
 
@@ -55,7 +56,9 @@ public class OpponentManager : MonoBehaviour
 
     public GameObject greyOut;
     
+
     private int _currentEmotion;
+    
     public int currentEmotion
     {
         get { return _currentEmotion; }
@@ -108,11 +111,30 @@ public class OpponentManager : MonoBehaviour
     void Start()
     {
         
-        if (DebugMode)
+        if (id == 0)
         {
             name = "dad";
             dialogue = new string[7];
 
+            //happiness
+            desiredEmotion = 0;
+            
+            dialogue[6] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
+            dialogue[5] = "We're really trying to work together, though… I believe we can do this.";
+            dialogue[4] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
+            dialogue[3] = "You know your mother and I are having some… disagreements, right?";
+            dialogue[2] = "I'm trying to talk to you. Can't you see that?";
+            dialogue[1] = "Enough. Listen to me while I'm talking to you.";
+            dialogue[0] = "I am through with not being listened to in my own house!";
+
+            endStateValueLose = 0;
+            endStateValueWin = 7;
+        }else if (id == 1)
+        {
+            name = "mom";
+            dialogue = new string[7];
+
+            //Change emotion
             desiredEmotion = 0;
             
             dialogue[6] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
@@ -126,6 +148,31 @@ public class OpponentManager : MonoBehaviour
             endStateValueLose = 0;
             endStateValueWin = 7;
         }
+
+        else if (id == 2)
+        {
+            name = "bro";
+            dialogue = new string[7];
+
+            //change emotion
+            desiredEmotion = 0;
+            
+            dialogue[6] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
+            dialogue[5] = "We're really trying to work together, though… I believe we can do this.";
+            dialogue[4] = "I appreciate you being so… present. You see, things have been incredibly difficult.";
+            dialogue[3] = "You know your mother and I are having some… disagreements, right?";
+            dialogue[2] = "I'm trying to talk to you. Can't you see that?";
+            dialogue[1] = "Enough. Listen to me while I'm talking to you.";
+            dialogue[0] = "I am through with not being listened to in my own house!";
+
+            endStateValueLose = 0;
+            endStateValueWin = 7;
+        }
+        else
+        {
+            
+        }
+        
         
         
         currentEmotion = 3;
