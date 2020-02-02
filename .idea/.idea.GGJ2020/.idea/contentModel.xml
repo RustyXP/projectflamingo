@@ -56,8 +56,8 @@
           <e p="GameManager.cs" t="Include" />
           <e p="GameOver.cs" t="Include" />
           <e p="ImageResultsParser.cs" t="Include" />
-          <e p="Intro.cs" t="Include" />
-          <e p="LevelIntroScreen.cs" t="Include" />
+          <e p="IntroScript.cs" t="Include" />
+          <e p="LevelIntroducer.cs" t="Include" />
           <e p="Loader.cs" t="Include" />
           <e p="MixAudioLevels.cs" t="Include" />
           <e p="SmileToStart.cs" t="Include" />

@@ -34,6 +34,7 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         hasSmiled = false;
+        //PL.enableSearch = true;
         StartCoroutine(
             tutorialTextDisplay("Your brother is feeling down. Maybe you should smile at him to encourage him!", false));
     }
@@ -41,7 +42,7 @@ public class TutorialManager : MonoBehaviour
     void Update()
     {
         //make it look for smiling
-        if (PL.enableSearch && PL.timer > PL.cutOffTime)
+        if (PL.timer > PL.cutOffTime && PL.emotion == "happy")
         {
             //disable timers
             hasSmiled = true;
@@ -70,6 +71,7 @@ public class TutorialManager : MonoBehaviour
         
         if (isEnd)
         {
+            PL.enableSearch = false;
             //do something before changing to the next screen
             for (int i = 0; i < 3; i++)
             {
