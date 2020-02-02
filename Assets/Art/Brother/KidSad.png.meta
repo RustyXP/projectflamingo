@@ -28,6 +28,10 @@ TextureImporter:
     21300046: KidSad_23
     21300048: KidSad_24
     21300050: KidSad_25
+    21300052: KidSad_26
+    21300054: KidSad_27
+    21300056: KidSad_28
+    21300058: KidSad_29
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -146,10 +150,10 @@ TextureImporter:
       name: KidSad_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 1285
-        width: 235
-        height: 250
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,7 +161,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f70e393242e8a4754b1168a2cbdc934e
+      spriteID: c47a87881c751467591daf9c245194df
       vertices: []
       indices: 
       edges: []
@@ -166,10 +170,10 @@ TextureImporter:
       name: KidSad_1
       rect:
         serializedVersion: 2
-        x: 250
-        y: 1281
-        width: 249
-        height: 254
+        x: 252
+        y: 1285
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,7 +181,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bfc1ea7d7c084435b11b510e39facaf
+      spriteID: 64c33a65a0138439495d91db3a1780f4
       vertices: []
       indices: 
       edges: []
@@ -186,10 +190,10 @@ TextureImporter:
       name: KidSad_2
       rect:
         serializedVersion: 2
-        x: 501
-        y: 1290
-        width: 246
-        height: 249
+        x: 504
+        y: 1285
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,7 +201,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 310d4e71b97214a76a475a97e380dad7
+      spriteID: 51b1fb104ba9b4e859a06ecf0587fd37
       vertices: []
       indices: 
       edges: []
@@ -206,10 +210,10 @@ TextureImporter:
       name: KidSad_3
       rect:
         serializedVersion: 2
-        x: 753
-        y: 1281
-        width: 246
-        height: 254
+        x: 756
+        y: 1285
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,7 +221,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0248b3ee2f3a74f238b7231569ccab32
+      spriteID: b5ca953e8d61d4a67966571e0358e5e7
       vertices: []
       indices: 
       edges: []
@@ -226,10 +230,10 @@ TextureImporter:
       name: KidSad_4
       rect:
         serializedVersion: 2
-        x: 1015
-        y: 1291
-        width: 236
-        height: 244
+        x: 1008
+        y: 1285
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,7 +241,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a64ce38a7591c42d59f896cb1f8dfb79
+      spriteID: c13e0b601c4444fffaa6b4ce59fd4562
       vertices: []
       indices: 
       edges: []
@@ -246,10 +250,10 @@ TextureImporter:
       name: KidSad_5
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1032
-        width: 235
-        height: 246
+        x: 0
+        y: 1028
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,7 +261,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe34b671e12af414ab4d2a013a3ec499
+      spriteID: 51a3bc1e0e2914a2e8368d02ded48fcc
       vertices: []
       indices: 
       edges: []
@@ -266,10 +270,10 @@ TextureImporter:
       name: KidSad_6
       rect:
         serializedVersion: 2
-        x: 249
-        y: 1024
-        width: 256
-        height: 254
+        x: 252
+        y: 1028
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,7 +281,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4f5d3ab0a6b34d9cafc2028df89b36d
+      spriteID: cba3278a2184c45a4b28110197c42224
       vertices: []
       indices: 
       edges: []
@@ -286,10 +290,10 @@ TextureImporter:
       name: KidSad_7
       rect:
         serializedVersion: 2
-        x: 509
-        y: 1022
-        width: 240
-        height: 261
+        x: 504
+        y: 1028
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,7 +301,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb6e51ef8afda4152ba998ec5faa3dec
+      spriteID: 584746fd8a0e640a0be963837b6809ab
       vertices: []
       indices: 
       edges: []
@@ -306,10 +310,10 @@ TextureImporter:
       name: KidSad_8
       rect:
         serializedVersion: 2
-        x: 753
-        y: 1025
-        width: 254
-        height: 255
+        x: 756
+        y: 1028
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,7 +321,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32d6acb7f67e64ce8b5c700aae4c5a0d
+      spriteID: dac7c9f1d5cc1429ba419fa021296c02
       vertices: []
       indices: 
       edges: []
@@ -326,10 +330,10 @@ TextureImporter:
       name: KidSad_9
       rect:
         serializedVersion: 2
-        x: 1016
-        y: 1026
-        width: 235
-        height: 252
+        x: 1008
+        y: 1028
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,7 +341,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 002b5e542341b46fbb9e15fbe91d01fb
+      spriteID: a64c572e2c1494e67ba3765e27293741
       vertices: []
       indices: 
       edges: []
@@ -347,9 +351,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 769
-        width: 255
-        height: 254
+        y: 771
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,7 +361,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 791c8bd5bf10c402aafe02111b1cc7c7
+      spriteID: d50c5391b70be46bca69e340dd148147
       vertices: []
       indices: 
       edges: []
@@ -366,10 +370,10 @@ TextureImporter:
       name: KidSad_11
       rect:
         serializedVersion: 2
-        x: 260
-        y: 767
-        width: 240
-        height: 256
+        x: 252
+        y: 771
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -377,7 +381,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50922e309d9424c8f9e6d0e2158b9a6a
+      spriteID: b95fdf595ce48417d877ddd1e61cc319
       vertices: []
       indices: 
       edges: []
@@ -386,10 +390,10 @@ TextureImporter:
       name: KidSad_12
       rect:
         serializedVersion: 2
-        x: 501
-        y: 765
-        width: 253
-        height: 256
+        x: 504
+        y: 771
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,7 +401,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed487677b9d2d4ee0bcbca613ad41071
+      spriteID: 10627d564dfc14b70a6e7922af5e222f
       vertices: []
       indices: 
       edges: []
@@ -406,9 +410,9 @@ TextureImporter:
       name: KidSad_13
       rect:
         serializedVersion: 2
-        x: 753
-        y: 765
-        width: 257
+        x: 756
+        y: 771
+        width: 252
         height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -417,7 +421,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf84cca0a6ced40a39c0d04b42ad55fe
+      spriteID: 86ce810b308004227af044f1cb0ec713
       vertices: []
       indices: 
       edges: []
@@ -426,69 +430,9 @@ TextureImporter:
       name: KidSad_14
       rect:
         serializedVersion: 2
-        x: 1014
-        y: 767
-        width: 237
-        height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 053e2d9f0f24a429f9961ffe064c648c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KidSad_15
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 516
-        width: 242
-        height: 251
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b335c5efbf46b461d921cef2279adea8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KidSad_16
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 504
-        width: 247
-        height: 261
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 018b28f610c91452a889df63af207afb
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KidSad_17
-      rect:
-        serializedVersion: 2
-        x: 494
-        y: 508
-        width: 271
+        x: 1008
+        y: 771
+        width: 252
         height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -497,7 +441,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 112bfcf06f5c142c799b423f770d13ed
+      spriteID: 3728475c9db48474086d77870f20fb27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidSad_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 514
+        width: 252
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16990411088d7476ca521397a1fd4ed7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidSad_16
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 514
+        width: 252
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94071573b774341c0bb2ec5e5f7a4918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidSad_17
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 514
+        width: 252
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ea85014b0504bcab65865274c56549
       vertices: []
       indices: 
       edges: []
@@ -506,10 +510,10 @@ TextureImporter:
       name: KidSad_18
       rect:
         serializedVersion: 2
-        x: 760
-        y: 511
-        width: 248
-        height: 254
+        x: 756
+        y: 514
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,7 +521,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98118b214176d41a0928acd846950f48
+      spriteID: 1be31c14573924bdd8ae0aa4a6eb43fc
       vertices: []
       indices: 
       edges: []
@@ -526,10 +530,10 @@ TextureImporter:
       name: KidSad_19
       rect:
         serializedVersion: 2
-        x: 1011
-        y: 516
-        width: 243
-        height: 248
+        x: 1008
+        y: 514
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -537,7 +541,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af98b8dffc72f4e5c8bdab15d4910a8b
+      spriteID: a7422225df4fd4d869ebd9e491adf1b5
       vertices: []
       indices: 
       edges: []
@@ -546,10 +550,10 @@ TextureImporter:
       name: KidSad_20
       rect:
         serializedVersion: 2
-        x: 7
-        y: 263
-        width: 243
-        height: 249
+        x: 0
+        y: 257
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,7 +561,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b51ceaba5f174f5580456d91afc09da
+      spriteID: bb720d2e726da413d86c4c0144254aa3
       vertices: []
       indices: 
       edges: []
@@ -566,10 +570,10 @@ TextureImporter:
       name: KidSad_21
       rect:
         serializedVersion: 2
-        x: 8
-        y: 6
-        width: 235
-        height: 248
+        x: 252
+        y: 257
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -577,7 +581,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2ab8b14d84594fa8be42ec7a0f06d9f
+      spriteID: ceef9669bee0243cabb54f5c73f1ff04
       vertices: []
       indices: 
       edges: []
@@ -586,10 +590,10 @@ TextureImporter:
       name: KidSad_22
       rect:
         serializedVersion: 2
-        x: 255
-        y: 10
-        width: 258
-        height: 498
+        x: 504
+        y: 257
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -597,7 +601,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3c55fa5f86294691bb7a21f74fbe461
+      spriteID: 4bf5d6e3d2d5a4233b691d2b95a44dfe
       vertices: []
       indices: 
       edges: []
@@ -606,10 +610,10 @@ TextureImporter:
       name: KidSad_23
       rect:
         serializedVersion: 2
-        x: 498
-        y: 2
-        width: 263
-        height: 506
+        x: 756
+        y: 257
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -617,7 +621,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cecddb24220fd43778651244c0a6764d
+      spriteID: c7293398bd021473cb586ed00deb578f
       vertices: []
       indices: 
       edges: []
@@ -626,10 +630,10 @@ TextureImporter:
       name: KidSad_24
       rect:
         serializedVersion: 2
-        x: 747
-        y: 13
-        width: 286
-        height: 494
+        x: 1008
+        y: 257
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -637,7 +641,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f271410c0bef8471fbfefd166a61b835
+      spriteID: 5208ae45f163e4c2dbafab7cb4d17950
       vertices: []
       indices: 
       edges: []
@@ -646,10 +650,10 @@ TextureImporter:
       name: KidSad_25
       rect:
         serializedVersion: 2
-        x: 998
-        y: 53
-        width: 260
-        height: 454
+        x: 0
+        y: 0
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -657,7 +661,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb09bfbf092e944e2b07f2eef53469b7
+      spriteID: 8ac1d3f7ce77c4bb29b66790032e1423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidSad_26
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 252
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1569de2e812794338827e9d5c4408874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidSad_27
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 252
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7cbe42f9c4c4b4fa9c5ea400cae021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidSad_28
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 252
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e88daf80b73471aa1ebd7d759259aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidSad_29
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 252
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadb3bcef7a774044b069fc612845def
       vertices: []
       indices: 
       edges: []

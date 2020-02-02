@@ -29,6 +29,9 @@ TextureImporter:
     21300048: KidHappy_24
     21300050: KidHappy_25
     21300052: KidHappy_26
+    21300054: KidHappy_27
+    21300056: KidHappy_28
+    21300058: KidHappy_29
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -147,10 +150,10 @@ TextureImporter:
       name: KidHappy_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1291
-        width: 235
-        height: 244
+        x: 0
+        y: 1285
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,7 +161,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4537c59239eb04450a4797290109505d
+      spriteID: d61cd17a3584847599bb0ccab76bed39
       vertices: []
       indices: 
       edges: []
@@ -167,10 +170,10 @@ TextureImporter:
       name: KidHappy_1
       rect:
         serializedVersion: 2
-        x: 253
-        y: 1291
-        width: 242
-        height: 244
+        x: 252
+        y: 1285
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,7 +181,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b632eeffe55f4ae98cb7b6c27af2610
+      spriteID: 718a8c852b1f2496fbca1e04138b02fd
       vertices: []
       indices: 
       edges: []
@@ -188,9 +191,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 504
-        y: 1290
-        width: 251
-        height: 245
+        y: 1285
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,7 +201,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1224459a8325043a5887a7d556b69353
+      spriteID: da2f564d4f34440a880ce519c2db8b14
       vertices: []
       indices: 
       edges: []
@@ -207,10 +210,10 @@ TextureImporter:
       name: KidHappy_3
       rect:
         serializedVersion: 2
-        x: 762
-        y: 1291
-        width: 237
-        height: 244
+        x: 756
+        y: 1285
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,7 +221,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 472bc11f6558b469aab43c038f75863e
+      spriteID: 7a3c678dd55c449abb5c5f9d92ac8b32
       vertices: []
       indices: 
       edges: []
@@ -227,10 +230,10 @@ TextureImporter:
       name: KidHappy_4
       rect:
         serializedVersion: 2
-        x: 1016
-        y: 1287
-        width: 235
-        height: 248
+        x: 1008
+        y: 1285
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,7 +241,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfcf73e72d8f04d5bb8f701010cb6e8d
+      spriteID: 68665439c97784305a67713ffd3aa031
       vertices: []
       indices: 
       edges: []
@@ -247,10 +250,10 @@ TextureImporter:
       name: KidHappy_5
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1033
-        width: 235
-        height: 245
+        x: 0
+        y: 1028
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,7 +261,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b350f5c3e33e44b5984cf29a010bfbc5
+      spriteID: 8fe0e961e0f3f476195b02211b173e31
       vertices: []
       indices: 
       edges: []
@@ -267,10 +270,10 @@ TextureImporter:
       name: KidHappy_6
       rect:
         serializedVersion: 2
-        x: 257
-        y: 1031
-        width: 247
-        height: 247
+        x: 252
+        y: 1028
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,7 +281,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5209e6a9de3b1438793841c8e9ac9e73
+      spriteID: 736ad3dbba6df409a81f5f770596e324
       vertices: []
       indices: 
       edges: []
@@ -287,10 +290,10 @@ TextureImporter:
       name: KidHappy_7
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1029
-        width: 244
-        height: 249
+        x: 504
+        y: 1028
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,7 +301,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c20374c5de51a48a59f4930bce692628
+      spriteID: 51e0abfa4a9a24fdca03638ecc2bf47a
       vertices: []
       indices: 
       edges: []
@@ -307,10 +310,10 @@ TextureImporter:
       name: KidHappy_8
       rect:
         serializedVersion: 2
-        x: 759
-        y: 1034
-        width: 240
-        height: 248
+        x: 756
+        y: 1028
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,7 +321,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 090f96f1304fd43b2871bdce98fbe185
+      spriteID: 5d8f78c55d2ec41dba38477d1c839cba
       vertices: []
       indices: 
       edges: []
@@ -327,10 +330,10 @@ TextureImporter:
       name: KidHappy_9
       rect:
         serializedVersion: 2
-        x: 1016
-        y: 1034
-        width: 235
-        height: 244
+        x: 1008
+        y: 1028
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,7 +341,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f2bc0812cac4f8685a605675993dc6
+      spriteID: 244503f1858f44f95a2dcf67c358c16f
       vertices: []
       indices: 
       edges: []
@@ -348,9 +351,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 777
-        width: 243
-        height: 244
+        y: 771
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,7 +361,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0eea10c371044a2bbcbaf6a918355de
+      spriteID: 99ef1b13c74aa4a62a277a2304a8f3c9
       vertices: []
       indices: 
       edges: []
@@ -367,10 +370,10 @@ TextureImporter:
       name: KidHappy_11
       rect:
         serializedVersion: 2
-        x: 260
-        y: 768
-        width: 239
-        height: 253
+        x: 252
+        y: 771
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,7 +381,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2514c1c7bba8a4b57bbeb780734aa147
+      spriteID: d36db41ee922d4e30877486eded5e586
       vertices: []
       indices: 
       edges: []
@@ -387,10 +390,10 @@ TextureImporter:
       name: KidHappy_12
       rect:
         serializedVersion: 2
-        x: 502
-        y: 766
-        width: 251
-        height: 259
+        x: 504
+        y: 771
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,7 +401,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfcfcab2f29c347c9aebf25ce0b8fba9
+      spriteID: d1f476bddc9564a4a8afa9550754efbe
       vertices: []
       indices: 
       edges: []
@@ -408,9 +411,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 756
-        y: 772
-        width: 243
-        height: 249
+        y: 771
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,7 +421,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51dae3ef0af7946229def10b5f13a143
+      spriteID: 5cc09675936cd43dca1c3955b86846fc
       vertices: []
       indices: 
       edges: []
@@ -427,10 +430,10 @@ TextureImporter:
       name: KidHappy_14
       rect:
         serializedVersion: 2
-        x: 1009
-        y: 777
-        width: 242
-        height: 244
+        x: 1008
+        y: 771
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -438,7 +441,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c379f9882fe954f0190e1c501eac7dd7
+      spriteID: 3b04cc569a08e4457b5e4b7027568f35
       vertices: []
       indices: 
       edges: []
@@ -447,10 +450,10 @@ TextureImporter:
       name: KidHappy_15
       rect:
         serializedVersion: 2
-        x: 5
-        y: 520
-        width: 242
-        height: 250
+        x: 0
+        y: 514
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,7 +461,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 768a30b503d3042119dba6cb412eaa95
+      spriteID: 1c22503dd55e9437d9b7b8bbb9e8dfa2
       vertices: []
       indices: 
       edges: []
@@ -467,10 +470,10 @@ TextureImporter:
       name: KidHappy_16
       rect:
         serializedVersion: 2
-        x: 250
-        y: 518
-        width: 257
-        height: 246
+        x: 252
+        y: 514
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,7 +481,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29fca654adeea438b8877a8135819a30
+      spriteID: 15730e5f706be4c37bc8e91058e63a8a
       vertices: []
       indices: 
       edges: []
@@ -487,10 +490,10 @@ TextureImporter:
       name: KidHappy_17
       rect:
         serializedVersion: 2
-        x: 509
-        y: 515
-        width: 251
-        height: 249
+        x: 504
+        y: 514
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -498,7 +501,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4740a92a659f4804bd833656f62066e
+      spriteID: dca012ecc134b4d16ad0843726438aab
       vertices: []
       indices: 
       edges: []
@@ -507,10 +510,10 @@ TextureImporter:
       name: KidHappy_18
       rect:
         serializedVersion: 2
-        x: 764
+        x: 756
         y: 514
-        width: 244
-        height: 254
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -518,7 +521,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63949bd6abf4d45ddbc3298a9b5e119c
+      spriteID: 3d0d79c3f4b324f50a5eb8b2526fa29c
       vertices: []
       indices: 
       edges: []
@@ -527,10 +530,10 @@ TextureImporter:
       name: KidHappy_19
       rect:
         serializedVersion: 2
-        x: 1016
-        y: 520
-        width: 235
-        height: 248
+        x: 1008
+        y: 514
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,7 +541,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9aa4531ca26840e29ad3a8bb88a01d1
+      spriteID: 9c417ff45ab9c4ec79cd1968d40d2baf
       vertices: []
       indices: 
       edges: []
@@ -547,10 +550,10 @@ TextureImporter:
       name: KidHappy_20
       rect:
         serializedVersion: 2
-        x: 7
-        y: 263
-        width: 236
-        height: 247
+        x: 0
+        y: 257
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -558,7 +561,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca98ba3aa1ab043b994a1956f3307459
+      spriteID: f375cb5628841434e9aadc0af9f93ce4
       vertices: []
       indices: 
       edges: []
@@ -567,10 +570,10 @@ TextureImporter:
       name: KidHappy_21
       rect:
         serializedVersion: 2
-        x: 8
-        y: 6
-        width: 274
-        height: 250
+        x: 252
+        y: 257
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -578,7 +581,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebe2a9d94ce0547b0a26ac105bdd9bfe
+      spriteID: 9ad250d906b104eb2ab95224d35612de
       vertices: []
       indices: 
       edges: []
@@ -587,10 +590,10 @@ TextureImporter:
       name: KidHappy_22
       rect:
         serializedVersion: 2
-        x: 258
-        y: 13
-        width: 241
-        height: 494
+        x: 504
+        y: 257
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -598,7 +601,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97872441cd84247e282d153f17fcd9d7
+      spriteID: 9419daf92995c4f1084206ae298f8bf7
       vertices: []
       indices: 
       edges: []
@@ -607,10 +610,10 @@ TextureImporter:
       name: KidHappy_23
       rect:
         serializedVersion: 2
-        x: 512
-        y: 45
-        width: 245
-        height: 465
+        x: 756
+        y: 257
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -618,7 +621,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3b2102d644304ee3b823aef7f0636e7
+      spriteID: d5fe2d6217a6e478a966d15e15e20b1a
       vertices: []
       indices: 
       edges: []
@@ -627,10 +630,10 @@ TextureImporter:
       name: KidHappy_24
       rect:
         serializedVersion: 2
-        x: 737
-        y: 95
-        width: 286
-        height: 412
+        x: 1008
+        y: 257
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -638,7 +641,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2d8cfe3fa0464b148d25588e842cd78
+      spriteID: 2c5781a0416bf43d7b01d90190108057
       vertices: []
       indices: 
       edges: []
@@ -647,10 +650,10 @@ TextureImporter:
       name: KidHappy_25
       rect:
         serializedVersion: 2
-        x: 906
-        y: 2
-        width: 352
-        height: 505
+        x: 0
+        y: 0
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -658,7 +661,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f4506327c6e74bfc93b60f7d4d0e770
+      spriteID: adad1ebb2778b40babcec407e160bb50
       vertices: []
       indices: 
       edges: []
@@ -667,10 +670,10 @@ TextureImporter:
       name: KidHappy_26
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 145
-        width: 4
-        height: 11
+        x: 252
+        y: 0
+        width: 252
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,7 +681,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69d8d8732338b47a6b4dcb02c3c62527
+      spriteID: 12a896df799654e16b800e682ed4e5c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidHappy_27
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 252
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acab57efe03044d8baeb7c51725f3bbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidHappy_28
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 252
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa4e0a44d9304061a8dcc5db2f1e6ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KidHappy_29
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 252
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122d5718e45b84f1e91b441e4dc5b875
       vertices: []
       indices: 
       edges: []

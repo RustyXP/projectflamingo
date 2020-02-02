@@ -42,6 +42,7 @@
         <e p="GameScripts" t="Include">
           <e p="OpponentManager.cs" t="Include" />
           <e p="PlaySceneManager.cs" t="Include" />
+          <e p="TutorialManager.cs" t="Include" />
         </e>
         <e p="PlayerFaceOutput.cs" t="Include" />
         <e p="Script" t="Include">
